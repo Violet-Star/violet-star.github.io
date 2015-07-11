@@ -1,24 +1,12 @@
 html
 	head
-		title Jade
-		meta(charset="utf-8")
-		meta(name="viewport", content="width=device-width, initial-scale=1")
-		link(rel="stylesheet", href="bootstrap/css/bootstrap.min.css")
-		link(rel="stylesheet", href="css/styles.css")
+		include mixin
+		+head-premade("Violet Star Home")
 
 	body
 		.container
-			.row
-				.col-sm-12
-				ul.nav.nav-tabs
-					li.active: a(href="#") Home
-					li: a(href="#")	About
-					li: a(href="#")	Contact
+			+navbar
 
 			.row
-				.col-sm-4
-					h1 Coming soon
-				.col-sm-4
-					h1 Repositories
-				.col-sm-4
-					h1 About me
+				.col-sm-12
+					h1.text-center.dark-head Coming soon
