@@ -5,5 +5,24 @@ html
 
 	body
 		.container
-			+navbar
+			+navbar(false, true)
+
+			h2.text-center(style="margin-bottom: 40px") Welcome to the repositories page
+
+			.row
+				.col-sm-4
+					h3.add-bottom-margin-20 Minecraft modding
+					+mediaobject("The Popcorn Mod", "images/popcorn.jpeg", "http://github.com/violet-star/PopcornGalore", "Yes, sadly this happened. And no it will not be updated any further.")
+					hr.add-bottom-margin-35
+					+mediaobject("Blood Magic Health Points", "images/heart.png", "http://github.com/violet-star/BMHP", "Good concept but terrible code, considering there's absolutely none!")
+				.col-sm-4.middle-col
+					h3.add-bottom-margin-20 Web design/development
+					+mediaobject("Violet Star site", "images/violet-star.jpeg", "http://github.com/violet-star/violet-star.github.io", "Look at all the code that makes up this website mainly written in JADE!")
+					hr.add-bottom-margin-35
+					+mediaobject("Aestrocorp site", "images/aestrocorp-github.png", "http://github.com/Aestrocorp/aestrocorp.github.io", "Let's just say everybody has to start somewhere and this is where I did...")
+				.col-sm-4
+					h3.add-bottom-margin-20 Other GitHub Accounts
+					+mediaobject("Aestrocorp", "images/aestrocorp-github.png", "http://github.com/Aestrocorp", "This was my first ever GitHub account, with ALOT of deleted repositories.")
+					hr.add-bottom-margin-35
+					+mediaobject("Violet Star", "images/violet-star.jpeg", "http://github.com/violet-star", "See all my GitHub repos and code here, have fun looking at almost nothing :D")
 				

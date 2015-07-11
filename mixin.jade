@@ -1,9 +1,16 @@
-mixin navbar
+mixin navbar(home, repo)
 	.row
 		.col-sm-12
 			ul.nav.nav-tabs
-				li: a(href="index.html") Home
-				li: a(href="repositories.html")	Repositories
+				if home
+					li.active: a(href="index.html") Home
+				else
+					li: a(href="index.html") Home
+				if repo
+					li.active: a(href="repositories.html") Repositories
+				else
+					li: a(href="repositories.html") Repositories
+
 
 mixin head-premade(title)
 	title #{title}
@@ -11,3 +18,17 @@ mixin head-premade(title)
 	meta(name="viewport", content="width=device-width, initial-scale=1")
 	link(rel="stylesheet", href="bootstrap/css/bootstrap.min.css")
 	link(rel="stylesheet", href="css/styles.css")
+
+mixin script-imports
+	script(src="bootstrap/js/bootstrap.min.js")
+	script(src="js/jquery-1.11.3.min.js")
+	script(src="js/nav-active.js")
+
+mixin mediaobject(title, imagesrc, imagelink, content)
+	.mediaobject
+		.media-left
+			a(href= "#{imagelink}")
+				img.media-object.auto-resize-64x64(src="#{imagesrc}")
+		.media-body
+			h4.media-heading #{title}
+			p #{content}

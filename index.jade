@@ -3,10 +3,12 @@ html
 		include mixin
 		+head-premade("Violet Star Home")
 
-	body
+	body(onLoad="getActiveTab('home')")
 		.container
-			+navbar
+			+navbar(true, false)
 
 			.row
 				.col-sm-12
 					h1.text-center.dark-head Coming soon
+
+		+script-imports
