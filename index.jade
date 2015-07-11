@@ -1,0 +1,24 @@
+html
+	head
+		title Jade
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(rel="stylesheet", href="bootstrap/css/bootstrap.min.css")
+		link(rel="stylesheet", href="css/styles.css")
+
+	body
+		.container
+			.row
+				.col-sm-12
+				ul.nav.nav-tabs
+					li.active: a(href="#") Home
+					li: a(href="#")	About
+					li: a(href="#")	Contact
+
+			.row
+				.col-sm-4
+					h1 This is column 1
+				.col-sm-4
+					h1 This is column 2
+				.col-sm-4
+					h1 This is column 3
